@@ -14,4 +14,4 @@ Here is a list of all the characters that are supported (feel free to add more!)
 - 0, 1, 2, 3, 4, 5, 6, 7, 8, 9
 - ., !, ?
 
-![picture](https://imgur.com/PFpRmyJ.png =446x245)
+![picture](https://imgur.com/PFpRmyJ.png)
