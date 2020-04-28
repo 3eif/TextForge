@@ -1,5 +1,8 @@
 local text = "Sample Text`0123456789`.!?`"..os.date("%x");
 
+local characterSpacing = 6;
+local lineSpacing = 1.5;
+
 --[=====[ 
   Use ` to create a new line
 
@@ -534,8 +537,9 @@ for i = 1, stringLength, 1 do
     end
 
     if string.match(string.sub(str, i, i), "`") then
-        xOffset = xOffset + 1.5;
+        xOffset = xOffset + lineSpacing;
         i2 = -1;
+        
         table = {
             {".", ".", ".", ".", "."},
             {".", ".", ".", ".", "."},
@@ -550,7 +554,7 @@ for i = 1, stringLength, 1 do
     for rows = 1, 7, 1 do
         for columns = 1, 5, 1 do
             if string.match(table[rows][columns], "#") then
-                forge.build("Primitives/block", {rows + (xOffset * 6), 0, columns + (6 * i2)}, {0, 0, 0})
+                forge.build("Primitives/block", {rows + (xOffset * characterSpacing), 0, columns + (characterSpacing * i2)}, {0, 0, 0})
             end
         end
     end
