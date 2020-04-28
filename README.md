@@ -1,6 +1,7 @@
 # Text Forge
 A script that generates text in Asset Forge
-![](https://imgur.com/PFpRmyJ =446x245)
+
+<img src="https://imgur.com/PFpRmyJ" width="446" height="245>
 
 ## Installation
 - Download/clone the script.
