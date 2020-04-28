@@ -1,8 +1,11 @@
-local text = "Bruh I'm sorry";
+local text = "lol`lol`lol`lol`lol`lol`lol`lol`lol`lol`lol`lol`lol`lol`lol`lol`lol`lol`lol`lol`lol`lol`lol`";
 
 local characterSpacing = 6;
 local lineSpacing = 1.5;
 local characterSize = 1; -- max: 1
+
+local collection = "Primitives"; -- the collection the block is in
+local block = "block"; -- the name of the block
 
 --[=====[ 
   Use ` to create a new line
@@ -555,7 +558,7 @@ for i = 1, stringLength, 1 do
     for rows = 1, 7, 1 do
         for columns = 1, 5, 1 do
             if string.match(table[rows][columns], "#") then
-                forge.build("Primitives/block", {rows + (xOffset * characterSpacing), 0, columns + (characterSpacing * i2)}, {0, 0, 0}, {characterSize, characterSize, characterSize})
+                forge.build(collection.."/"..block, {rows + (xOffset * characterSpacing), 0, columns + (characterSpacing * i2)}, {0, 0, 0}, {characterSize, characterSize, characterSize})
             end
         end
     end
