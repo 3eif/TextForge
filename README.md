@@ -6,8 +6,9 @@ A script that generates text in Asset Forge
 ## Installation
 - Download/clone the script.
 - Open Asset Forge.
-- Click on `Scripts` in the upper right corner.
-- Open the script.
+- Click on `Scripts` in the upper left corner.
+- Choose the script called `textforge.lua`.
+- To edit the sample text: Open the script in a text editor then modify the `text` variable.
 
 ## Documentation
 Here is a list of all the characters that are supported (feel free to add more!):
