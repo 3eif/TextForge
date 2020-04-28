@@ -1,4 +1,4 @@
-local text = "lol`lol`lol`lol`lol`lol`lol`lol`lol`lol`lol`lol`lol`lol`lol`lol`lol`lol`lol`lol`lol`lol`lol`";
+local text = "Sample Text`1234";
 
 local characterSpacing = 6;
 local lineSpacing = 1.5;
