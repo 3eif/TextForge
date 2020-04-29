@@ -1,4 +1,4 @@
-local text = "Sample Text`12345";
+local text = "Sample Text`2345"
 
 local characterSpacing = 6
 local lineSpacing = 1.5
@@ -361,29 +361,6 @@ for i = 1, stringLength, 1 do
         }
     end
 
-    if string.match(string.sub(str, i, i), "r") then
-        table = {
-            {"#", "#", "#", "#", "."},
-            {"#", ".", ".", ".", "#"},
-            {"#", ".", ".", ".", "#"},
-            {"#", "#", "#", "#", "."},
-            {"#", ".", "#", ".", "."},
-            {"#", ".", ".", "#", "."},
-            {"#", ".", ".", ".", "#"}
-        }
-    end
-
-    if string.match(string.sub(str, i, i), "r") then
-        table = {
-            {"#", "#", "#", "#", "."},
-            {"#", ".", ".", ".", "#"},
-            {"#", ".", ".", ".", "#"},
-            {"#", "#", "#", "#", "."},
-            {"#", ".", "#", ".", "."},
-            {"#", ".", ".", "#", "."},
-            {"#", ".", ".", ".", "#"}
-        }
-    end
     if string.match(string.sub(str, i, i), "r") then
         table = {
             {"#", "#", "#", "#", "."},
