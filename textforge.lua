@@ -1,4 +1,4 @@
-local text = ":)"
+local text = "Sample Text"
 
 local characterSpacing = 6
 local lineSpacing = 1.5
