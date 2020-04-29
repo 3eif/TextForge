@@ -1,11 +1,11 @@
-local text = "Sample Text`1234";
+local text = "Sample Text`12345";
 
-local characterSpacing = 6;
-local lineSpacing = 1.5;
-local characterSize = 1; -- max: 1
+local characterSpacing = 6
+local lineSpacing = 1.5
+local characterSize = 1 -- max: 1
 
-local collection = "Primitives"; -- the collection the block is in
-local block = "block"; -- the name of the block
+local collection = "Primitives" -- the collection the block is in
+local block = "block" -- the name of the block
 
 --[=====[ 
   Use ` to create a new line
@@ -16,13 +16,13 @@ local block = "block"; -- the name of the block
     . ! ?
 --]=====]
 
-forge.clear();
+forge.clear()
 
-local str = string.lower(text);
-local numberString = tostring(str);
-local stringLength = string.len(numberString);
-local i2 = 0;
-local xOffset = 0;
+local str = string.lower(text)
+local numberString = tostring(str)
+local stringLength = string.len(numberString)
+local i2 = 0
+local xOffset = 0
 
 for i = 1, stringLength, 1 do
     if string.match(string.sub(str, i, i), "/") then
@@ -541,9 +541,9 @@ for i = 1, stringLength, 1 do
     end
 
     if string.match(string.sub(str, i, i), "`") then
-        xOffset = xOffset + lineSpacing;
-        i2 = -1;
-        
+        xOffset = xOffset + lineSpacing
+        i2 = -1
+
         table = {
             {".", ".", ".", ".", "."},
             {".", ".", ".", ".", "."},
@@ -555,12 +555,29 @@ for i = 1, stringLength, 1 do
         }
     end
 
+    if string.match(string.sub(str, i, i), ":") then
+        table = {
+            {".", ".", ".", ".", "."},
+            {".", ".", ".", ".", "."},
+            {"#", ".", ".", ".", "."},
+            {".", ".", ".", ".", "."},
+            {"#", ".", ".", ".", "."},
+            {".", ".", ".", ".", "."},
+            {".", ".", ".", ".", "."}
+        }
+    end
+
     for rows = 1, 7, 1 do
         for columns = 1, 5, 1 do
             if string.match(table[rows][columns], "#") then
-                forge.build(collection.."/"..block, {rows + (xOffset * characterSpacing), 0, columns + (characterSpacing * i2)}, {0, 0, 0}, {characterSize, characterSize, characterSize})
+                forge.build(
+                    collection .. "/" .. block,
+                    {rows + (xOffset * characterSpacing), 0, columns + (characterSpacing * i2)},
+                    {0, 0, 0},
+                    {characterSize, characterSize, characterSize}
+                )
             end
         end
     end
-    i2 = i2 + 1;
+    i2 = i2 + 1
 end
